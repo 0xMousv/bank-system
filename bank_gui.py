@@ -26,9 +26,9 @@ def signup():
         passwd = password.get()
         balance = float(balan.get())
         if user in users:
-            messagebox.showerror("Error", "A7A BA2")
+            messagebox.showerror("Error", "This User is used")
         elif user == "" or passwd == "":
-            messagebox.showerror("Error", "a7a ba2")
+            messagebox.showerror("Error", "please fill the boxs)
         else:
             users[user] = { "password": passwd, "balance": balance, "transactions": [] }
             messagebox.showinfo("Creating accout Succses" , f"Welcome ,{user}")
@@ -54,9 +54,9 @@ def login():
                 messagebox.showinfo("login","login succses")
                 dashboard(user)
             else:
-                messagebox.showerror("","kosomk")
+                messagebox.showerror("","login faild")
         else:
-            messagebox.showerror("","kosomk")
+            messagebox.showerror("","login faild")
     
     tk.Button(window,text="Login",command=log).pack()
 
